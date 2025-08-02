@@ -1,91 +1,65 @@
-
 # Parachute Gore & 3D Model Generator
 
-This tool helps generate printable gore patterns and a 3D mesh model for hemispherical parachutes, primarily for use in rocket recovery systems.
+This tool generates printable gore patterns and a 3D mesh model for hemispherical parachutes, primarily intended for rocket recovery systems.
 
----
+## Features
 
-# Features
+- Gore pattern generator with customizable diameter and panel count  
+- 3D STL mesh output for simulation or CAD  
+- Seam allowance and spill hole customization  
 
--Gore Generator: Creates scalable, printable gore patterns based on diameter and number of panels.
--3D Model Generator: Produces a 3D `.STL` mesh of the parachute for simulations, visual checks, or import into CAD.
--Seam Allowance: Option to include seam allowance in pattern generation.
--Spill Hole: Customizable central spill hole diameter.
-
-
-
-# Project Structure
-
-```
+## Project Structure
 
 parachute/
-├── gore\_generator.py           # Main script
-├── requirements.txt            # Python dependencies
-├── README.md                   # This file
-└── outputs/                    # Generated files (PDF + STL)
-
-
-````
+├── design/
+│ ├── generate_gore.py
+│ ├── requirements.txt
+│ ├── README.md
+│ └── outputs/
 
 
 
-# Requirements
+## Requirements
 
-Install the required Python libraries:
-
-```bash
+```
 pip install -r requirements.txt
-````
 
-If you want to install manually:
+```
+Or install dependencies manually:
 
 ```
 pip install numpy matplotlib trimesh
+
 ```
 
+Usage
 
-
-# How to Run
-
-Run the script using:
+Run the generator:
 
 ```
 python generate_gore.py
+
 ```
+You will be prompted for parachute diameter, number of gores, seam allowance, and spill hole size.
 
-You will be prompted to input:
+Output
+Printable gore pattern PDFs (gore_*.pdf)
 
-Diameter of parachute (in meters)
-Number of gores (panels)
-Seam allowance (in cm)
-Spill hole diameter (in cm)
+3D mesh STL files (parachute_*.stl)
+Saved in outputs/.
 
-The script will generate:
+Notes
+Assumes hemispherical parachute geometry
 
- `gore_*.pdf` – Gore pattern for printing
- `parachute_*.stl` – 3D parachute mesh
+STL mesh inflated to mimic deployed shape
 
+Seam allowances shown as dashed lines
 
-# Output
+Future Improvements
+JSON config support
 
-All generated files are saved to the `outputs/` directory automatically.
+CLI argument parsing
 
-You can import the `.stl` file into Fusion 360, SolidWorks, or other CAD software for visualization or validation.
-The PDF gore can be printed and used for cutting fabric panels.
+Auto-scale PDFs for better printing
 
-
-
-# Notes
-
-This tool assumes a simple hemispherical parachute geometry.
-STL mesh is inflated slightly to mimic deployed shape (non-rigid).
-Seam allowance is visualized as dashed lines.
-Gores are symmetric and printable on pages (depending on dimensions).
-
-
-# Future Improvements
-Config file input support (JSON)
-CLI arguments support
-Auto-scaling gore PDF to fit pages better
-Optional mesh inflation preview toggle
-
+Mesh inflation preview toggle

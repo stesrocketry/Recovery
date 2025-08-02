@@ -10,12 +10,14 @@ This tool generates printable gore patterns and a 3D mesh model for hemispherica
 
 ## Project Structure
 
+```
 parachute/
 ├── design/
 │ ├── generate_gore.py
 │ ├── requirements.txt
 │ ├── README.md
 │ └── outputs/
+```
 
 
 

@@ -23,13 +23,10 @@ Arduino-based data logger to measure parachute drag force using an HX711 load ce
 
 ## Output
 
-Data logged to files named `drag_log_X.txt` with columns:
+- Data logged to files named `drag_log_X.txt` with columns:
 
-Millis RawValue Force(N)
+`Millis` `RawValue` `Force(N)`
 
-markdown
-Copy
-Edit
 
 ## Usage Notes
 

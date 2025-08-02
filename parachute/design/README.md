@@ -1,4 +1,4 @@
-# Parachute Gore & 3D Model Generator
+### Parachute Gore & 3D Model Generator
 
 This tool generates printable gore patterns and a 3D mesh model for hemispherical parachutes, primarily intended for rocket recovery systems.
 
@@ -34,7 +34,8 @@ pip install numpy matplotlib trimesh
 
 ```
 
-Usage
+
+## Usage
 
 Run the generator:
 
@@ -44,20 +45,20 @@ python generate_gore.py
 ```
 You will be prompted for parachute diameter, number of gores, seam allowance, and spill hole size.
 
-Output
+# Output
 Printable gore pattern PDFs (gore_*.pdf)
 
 3D mesh STL files (parachute_*.stl)
 Saved in outputs/.
 
-Notes
+# Notes
 Assumes hemispherical parachute geometry
 
 STL mesh inflated to mimic deployed shape
 
 Seam allowances shown as dashed lines
 
-Future Improvements
+# Future Improvements
 JSON config support
 
 CLI argument parsing
